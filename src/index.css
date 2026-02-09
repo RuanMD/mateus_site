@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 200 30% 98%;
+    --foreground: 200 10% 32%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 10% 32%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 10% 32%;
+
+    --primary: 207 84% 14%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 205 77% 22%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 200 20% 96%;
+    --muted-foreground: 200 10% 45%;
+
+    --accent: 168 72% 28%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 15% 88%;
+    --input: 200 15% 88%;
+    --ring: 168 72% 38%;
+
+    --radius: 0.5rem;
+
+    /* Custom semantic tokens */
+    --hero-gradient-start: 207 84% 14%;
+    --hero-gradient-end: 205 77% 22%;
+    --teal: 168 72% 38%;
+    --teal-light: 168 72% 88%;
+    --navy: 207 84% 14%;
+    --navy-light: 207 40% 92%;
+  }
+
+  .dark {
+    --background: 207 84% 8%;
+    --foreground: 200 30% 98%;
+
+    --card: 207 70% 12%;
+    --card-foreground: 200 30% 98%;
+
+    --popover: 207 70% 12%;
+    --popover-foreground: 200 30% 98%;
+
+    --primary: 168 72% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 205 77% 22%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 207 50% 20%;
+    --muted-foreground: 200 20% 70%;
+
+    --accent: 168 72% 38%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 207 40% 25%;
+    --input: 207 40% 25%;
+    --ring: 168 72% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-12 sm:py-16 md:py-24 lg:py-32;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)));
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Responsive typography utilities */
+  .heading-1 {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold;
+  }
+
+  .heading-2 {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold;
+  }
+
+  .heading-3 {
+    @apply text-lg sm:text-xl md:text-2xl font-display font-semibold;
+  }
+
+  .body-large {
+    @apply text-base sm:text-lg md:text-xl;
+  }
+
+  .body-default {
+    @apply text-sm sm:text-base;
+  }
+}
