@@ -69,7 +69,7 @@ Allow: /*.webp
 Allow: /*.svg
 
 # Sitemaps
-Sitemap: https://advogandoparaenfermagem.com.br/sitemap.xml
+Sitemap: https://advogandoparaenfermagem.com.br/sitemap-index.xml
 
 # Host directive
 Host: https://advogandoparaenfermagem.com.br

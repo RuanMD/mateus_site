@@ -174,8 +174,8 @@ export default function Footer() {
       <div className="container-custom py-14 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-12">
           
-          {/* Brand - Larger Column */}
-          <div className="lg:col-span-4 space-y-6">
+          {/* Brand */}
+          <div className="lg:col-span-3 space-y-6">
             <Link to="/" className="flex items-center gap-3 group inline-flex">
               <div className="relative">
                 <div className="absolute inset-0 bg-accent/20 rounded-xl blur-lg group-hover:bg-accent/30 transition-colors" />
@@ -275,17 +275,72 @@ export default function Footer() {
             </ul>
           </nav>
 
-          {/* Contact Info */}
+          {/* Cities */}
+          <nav className="lg:col-span-2" aria-label="Cidades atendidas">
+            <h4 className="text-xs text-primary-foreground/50 uppercase tracking-wider mb-4 font-medium">
+              Cidades Atendidas
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  to="/cidades"
+                  title="Ver todas as cidades atendidas"
+                  className="text-sm text-accent font-medium hover:text-accent/80 transition-colors inline-flex items-center gap-1 group"
+                >
+                  <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                  Ver todas as cidades
+                </Link>
+              </li>
+              <li>
+                <Link to="/aposentadoria-especial-da-enfermagem-sao-paulo-sp" title="Aposentadoria Especial em São Paulo" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors inline-flex items-center gap-1 group">
+                  <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                  São Paulo - SP
+                </Link>
+              </li>
+              <li>
+                <Link to="/aposentadoria-especial-da-enfermagem-rio-de-janeiro-rj" title="Aposentadoria Especial no Rio de Janeiro" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors inline-flex items-center gap-1 group">
+                  <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                  Rio de Janeiro - RJ
+                </Link>
+              </li>
+              <li>
+                <Link to="/aposentadoria-especial-da-enfermagem-belo-horizonte-mg" title="Aposentadoria Especial em Belo Horizonte" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors inline-flex items-center gap-1 group">
+                  <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                  Belo Horizonte - MG
+                </Link>
+              </li>
+              <li>
+                <Link to="/aposentadoria-especial-da-enfermagem-cuiaba-mt" title="Aposentadoria Especial em Cuiabá" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors inline-flex items-center gap-1 group">
+                  <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                  Cuiabá - MT
+                </Link>
+              </li>
+              <li>
+                <Link to="/aposentadoria-especial-da-enfermagem-salvador-ba" title="Aposentadoria Especial em Salvador" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors inline-flex items-center gap-1 group">
+                  <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                  Salvador - BA
+                </Link>
+              </li>
+              <li>
+                <Link to="/aposentadoria-especial-da-enfermagem-fortaleza-ce" title="Aposentadoria Especial em Fortaleza" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors inline-flex items-center gap-1 group">
+                  <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                  Fortaleza - CE
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
+          {/* Contact Info + Address */}
           <div className="lg:col-span-3">
             <h4 className="text-xs text-primary-foreground/50 uppercase tracking-wider mb-4 font-medium">
               Contato
             </h4>
             <ul className="space-y-4">
               <li>
-                <a 
-                  href="https://wa.me/5565981579393?text=Olá%2C%20Dr.%20Mateus!%20Vim%20através%20do%20site%20e%20gostaria%20de%20receber%20orientação%20jurídica%20sobre%20direitos%20da%20Enfermagem." 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://wa.me/5565981579393?text=Olá%2C%20Dr.%20Mateus!%20Vim%20através%20do%20site%20e%20gostaria%20de%20receber%20orientação%20jurídica%20sobre%20direitos%20da%20Enfermagem."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   title="Fale pelo WhatsApp com o Advogado da Enfermagem"
                   className="flex items-center gap-3 text-primary-foreground/70 hover:text-accent transition-colors group"
                 >
@@ -296,8 +351,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="mailto:mateus@advogandoparaenfermagem.blog.br" 
+                <a
+                  href="mailto:mateus@advogandoparaenfermagem.blog.br"
                   title="Envie um email para o Advogado da Enfermagem"
                   className="flex items-center gap-3 text-primary-foreground/70 hover:text-accent transition-colors group"
                 >
@@ -313,24 +368,17 @@ export default function Footer() {
                 </div>
                 <span className="text-sm">Seg-Sex, 9h às 18h<br />(Horário de Brasília)</span>
               </li>
+              <li className="flex items-start gap-3 text-primary-foreground/60 pt-2 border-t border-primary-foreground/10">
+                <div className="w-8 h-8 rounded-lg bg-primary-foreground/5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <MapPin className="h-4 w-4 text-primary-foreground/50" />
+                </div>
+                <address className="text-sm not-italic leading-relaxed">
+                  Av. Historiador Rubens de Mendonça, 2000<br />
+                  Sala 1107 – Bosque da Saúde<br />
+                  Cuiabá – MT, 78048-425
+                </address>
+              </li>
             </ul>
-          </div>
-
-          {/* Address */}
-          <div className="lg:col-span-3">
-            <h4 className="text-xs text-primary-foreground/50 uppercase tracking-wider mb-4 font-medium">
-              Endereço
-            </h4>
-            <div className="flex items-start gap-3 text-primary-foreground/60">
-              <div className="w-8 h-8 rounded-lg bg-primary-foreground/5 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <MapPin className="h-4 w-4 text-primary-foreground/50" />
-              </div>
-              <address className="text-sm not-italic leading-relaxed">
-                Av. Historiador Rubens de Mendonça, 2000<br />
-                Sala 1107 – Bosque da Saúde<br />
-                Cuiabá – MT, 78048-425
-              </address>
-            </div>
           </div>
         </div>
 

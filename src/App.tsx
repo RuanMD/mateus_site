@@ -21,6 +21,8 @@ const PoliticaPrivacidade = lazy(() => import("./pages/PoliticaPrivacidade"));
 const AdminLogin = lazy(() => import("./pages/admin/AdminLogin"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 const AdminPostEditor = lazy(() => import("./pages/admin/AdminPostEditor"));
+const CityPage = lazy(() => import("./pages/CityPage"));
+const CidadesPage = lazy(() => import("./pages/CidadesPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -54,6 +56,8 @@ function AnimatedRoutes() {
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/post/:id" element={<AdminPostEditor />} />
+          <Route path="/cidades" element={<CidadesPage />} />
+          <Route path="/:slug" element={<CityPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
@@ -71,7 +75,7 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTop />
           <AnimatedRoutes />
-          
+
         </BrowserRouter>
       </TooltipProvider>
     </HelmetProvider>
