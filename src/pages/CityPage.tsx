@@ -170,7 +170,7 @@ const CityPage = () => {
                   </div>
                   <div className="p-5 text-center border-t border-border">
                     <h3 className="text-xl font-display font-bold text-primary">Mateus Gonçalves</h3>
-                    <p className="text-sm text-accent font-medium">OAB/MT 23.456</p>
+                    <p className="text-sm text-accent font-medium">OAB/MT 21.384</p>
                   </div>
                 </div>
                 {/* Badge de atendimentos */}
