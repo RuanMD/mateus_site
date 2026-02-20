@@ -113,18 +113,18 @@ export default function Footer() {
     <footer className="bg-gradient-to-b from-primary to-primary/95 text-primary-foreground relative overflow-hidden">
       {/* Decorative top border */}
       <div className="h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
-      
+
       {/* Newsletter Section */}
       <div className="relative overflow-hidden border-b border-primary-foreground/10">
-        <AnimatedGridPattern 
-          numSquares={30} 
-          maxOpacity={0.1} 
-          duration={3} 
-          repeatDelay={1} 
+        <AnimatedGridPattern
+          numSquares={30}
+          maxOpacity={0.1}
+          duration={3}
+          repeatDelay={1}
           className={cn(
-            "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]", 
+            "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]",
             "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 fill-accent/20 stroke-accent/20"
-          )} 
+          )}
         />
         <div className="container-custom py-14 sm:py-16 relative z-10">
           <div className="max-w-2xl mx-auto text-center">
@@ -140,17 +140,17 @@ export default function Footer() {
             </p>
             <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
               <div className="relative flex-1">
-                <Input 
-                  type="email" 
-                  placeholder="Seu melhor e-mail" 
-                  value={email} 
-                  onChange={e => setEmail(e.target.value)} 
-                  className="bg-primary-foreground/5 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-accent focus:ring-accent/20 h-12 pl-4 pr-4 rounded-xl" 
+                <Input
+                  type="email"
+                  placeholder="Seu melhor e-mail"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                  className="bg-primary-foreground/5 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-accent focus:ring-accent/20 h-12 pl-4 pr-4 rounded-xl"
                 />
               </div>
-              <Button 
-                type="submit" 
-                disabled={isSubmitting} 
+              <Button
+                type="submit"
+                disabled={isSubmitting}
                 className="bg-accent hover:bg-accent/90 text-primary font-semibold px-6 h-12 rounded-xl shadow-lg shadow-accent/20 hover:shadow-accent/30 transition-all duration-300"
               >
                 {isSubmitting ? (
@@ -173,7 +173,7 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="container-custom py-14 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-12">
-          
+
           {/* Brand */}
           <div className="lg:col-span-3 space-y-6">
             <Link to="/" className="flex items-center gap-3 group inline-flex">
@@ -193,38 +193,38 @@ export default function Footer() {
             <p className="text-sm text-primary-foreground/70 leading-relaxed max-w-xs">
               Advogado exclusivo para profissionais da Enfermagem em todo o Brasil. Protegendo quem cuida do país todos os dias.
             </p>
-            
+
             {/* Social Icons */}
             <div className="pt-2">
               <p className="text-xs text-primary-foreground/50 uppercase tracking-wider mb-3 font-medium">
                 Redes Sociais
               </p>
               <div className="flex gap-2">
-                <a 
-                  href="https://instagram.com/advogandoparaenfermagem" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="w-10 h-10 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:text-white transition-all duration-300 group" 
+                <a
+                  href="https://instagram.com/advogandoparaenfermagem"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:text-white transition-all duration-300 group"
                   aria-label="Siga no Instagram"
                 >
                   <Instagram className="h-4 w-4 group-hover:scale-110 transition-transform" />
                 </a>
-                <a 
-                  href="https://www.tiktok.com/@advogandoparaenfermagem" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="w-10 h-10 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 flex items-center justify-center hover:bg-black hover:border-transparent hover:text-white transition-all duration-300 group" 
+                <a
+                  href="https://www.tiktok.com/@advogandoparaenfermagem"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 flex items-center justify-center hover:bg-black hover:border-transparent hover:text-white transition-all duration-300 group"
                   aria-label="Siga no TikTok"
                 >
                   <svg className="h-4 w-4 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                   </svg>
                 </a>
-                <a 
-                  href="https://www.youtube.com/@AdvogandoParaEnfermagem" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="w-10 h-10 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 flex items-center justify-center hover:bg-red-600 hover:border-transparent hover:text-white transition-all duration-300 group" 
+                <a
+                  href="https://www.youtube.com/@AdvogandoParaEnfermagem"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 flex items-center justify-center hover:bg-red-600 hover:border-transparent hover:text-white transition-all duration-300 group"
                   aria-label="Inscreva-se no YouTube"
                 >
                   <Youtube className="h-4 w-4 group-hover:scale-110 transition-transform" />
@@ -241,8 +241,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.to}>
-                  <Link 
-                    to={link.to} 
+                  <Link
+                    to={link.to}
                     title={link.title}
                     className="text-sm text-primary-foreground/70 hover:text-accent transition-colors inline-flex items-center gap-1 group"
                   >
@@ -262,8 +262,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.to}>
-                  <Link 
-                    to={link.to} 
+                  <Link
+                    to={link.to}
                     title={link.title}
                     className="text-sm text-primary-foreground/70 hover:text-accent transition-colors inline-flex items-center gap-1 group"
                   >
@@ -408,21 +408,6 @@ export default function Footer() {
                 Fale Conosco
               </Link>
             </div>
-          </div>
-          
-          {/* Developer Credit */}
-          <div className="flex items-center justify-center gap-1.5 mt-6 text-xs text-primary-foreground/30">
-            <span>Desenvolvido com</span>
-            <Heart className="h-3 w-3 text-red-400 fill-red-400" />
-            <span>por</span>
-            <a 
-              href="https://www.magoi.online" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary-foreground/50 hover:text-accent transition-colors font-medium"
-            >
-              Magoi
-            </a>
           </div>
         </div>
       </div>
